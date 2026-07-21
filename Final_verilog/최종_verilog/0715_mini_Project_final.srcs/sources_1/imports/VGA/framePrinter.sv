@@ -1,0 +1,102 @@
+`timescale 1ns / 1ps
+
+module framePrinter(
+    input  logic        clk,
+    input  logic        reset,
+    input  logic        vsync,
+    input  logic [9:0]  x_pixel,
+    input  logic [9:0]  y_pixel,
+    input  logic [15:0] imgPxlData,
+    output logic [$clog2(320*240)-1:0] imgPxlAddr,
+
+    // frame print
+    input  logic [3:0]  note_x0,
+    input  logic [3:0]  note_x1,
+    input  logic [3:0]  note_x2,
+    input  logic [3:0]  note_x3,
+    input  logic [9:0]  note_x4,
+    input  logic [9:0]  note_x5,
+    input  logic [9:0]  note_x6,
+    input  logic [9:0]  note_x7,
+    input  logic [9:0]  note_x8,
+    input  logic [9:0]  note_x9,
+    input  logic [9:0]  note_x10,
+    input  logic [9:0]  note_x11,
+    input  logic [9:0]  note_x12,
+    input  logic [9:0]  note_x13,
+    input  logic [9:0]  note_x14,
+    input  logic [9:0]  note_x15,
+    input  logic [9:0]  note_y0,
+    input  logic [9:0]  note_y1,
+    input  logic [9:0]  note_y2,
+    input  logic [9:0]  note_y3,
+    input  logic [9:0]  note_y4,
+    input  logic [9:0]  note_y5,
+    input  logic [9:0]  note_y6,
+    input  logic [9:0]  note_y7,
+    input  logic [9:0]  note_y8,
+    input  logic [9:0]  note_y9,
+    input  logic [9:0]  note_y10,
+    input  logic [9:0]  note_y11,
+    input  logic [9:0]  note_y12,
+    input  logic [9:0]  note_y13,
+    input  logic [9:0]  note_y14,
+    input  logic [9:0]  note_y15,
+
+    // region detector
+    output logic [3:0]  region,
+
+    output logic [11:0]  RGBport
+);
+
+    RegionDetector U_Region_Detector(
+        .clk(clk),
+        .reset(reset),
+        .vsync(vsync),
+        .x_pixel_VGA(x_pixel),
+        .y_pixel_VGA(y_pixel),
+        .frame_data(imgPxlData),
+        .region(region)
+    );
+
+    frameController U_Frame_Controller(
+        .note_x0(note_x0),
+        .note_x1(note_x1),
+        .note_x2(note_x2),
+        .note_x3(note_x3),
+        .note_x4(note_x4),
+        .note_x5(note_x5),
+        .note_x6(note_x6),
+        .note_x7(note_x7),
+        .note_x8(note_x8),
+        .note_x9(note_x9),
+        .note_x10(note_x10),
+        .note_x11(note_x11),
+        .note_x12(note_x12),
+        .note_x13(note_x13),
+        .note_x14(note_x14),
+        .note_x15(note_x15),
+        .note_y0(note_y0),
+        .note_y1(note_y1),
+        .note_y2(note_y2),
+        .note_y3(note_y3),
+        .note_y4(note_y4),
+        .note_y5(note_y5),
+        .note_y6(note_y6),
+        .note_y7(note_y7),
+        .note_y8(note_y8),
+        .note_y9(note_y9),
+        .note_y10(note_y10),
+        .note_y11(note_y11),
+        .note_y12(note_y12),
+        .note_y13(note_y13),
+        .note_y14(note_y14),
+        .note_y15(note_y15),
+        .x_pixel_VGA(x_pixel),
+        .y_pixel_VGA(y_pixel),
+        .region(region),
+        .imgPxlData(imgPxlData),
+        .imgPxlAddr(imgPxlAddr),
+        .RGBport(RGBport)
+    );
+endmodule

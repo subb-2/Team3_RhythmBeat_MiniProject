@@ -1,0 +1,172 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Jul 16 15:51:59 2026
+| Host         : DESKTOP-7CFQ9ND running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    94 |
+|    Minimum number of control sets                        |    94 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   360 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    94 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |    44 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |    26 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     4 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            1 |
+| No           | No                    | Yes                    |             297 |          119 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              16 |            4 |
+| Yes          | No                    | Yes                    |             685 |          239 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+---------------------------------------------------------------------------------------+---------------------------------------+------------------+----------------+--------------+
+|         Clock Signal         |                                     Enable Signal                                     |            Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------+---------------------------------------------------------------------------------------+---------------------------------------+------------------+----------------+--------------+
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/U_SCCB_MASTER/U_I2C_MASTER/scl_r              | reset_IBUF                            |                1 |              1 |         1.00 |
+|  rclk                        | vsync_IBUF                                                                            | reset_IBUF                            |                1 |              1 |         1.00 |
+|  rclk                        |                                                                                       |                                       |                1 |              2 |         2.00 |
+|  pclk_IBUF_BUFG              |                                                                                       | reset_IBUF                            |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG               | U_RECEIVER/U_UART_RX/E[0]                                                             | reset_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_8[0]                               | U_MainController/U_main_control/AR[0] |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in21_in                                  | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in15_in                                  | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in5_in                                   | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in17_in                                  | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in11_in                                  | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in13_in                                  | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in7_in                                   | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in9_in                                   | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/p_1_in19_in                                  | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_6[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos2[3]_i_1_n_0                            | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_RECEIVER/w_note_start                                                               | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg[0]                                 | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos3[3]_i_1_n_0                            | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos14[3]_i_1_n_0                           | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_sender/U_FIFO_TX/U_CONTROL_UNIT/FSM_sequential_state_reg[3][0]                      | reset_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_43[0]                              | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos13[3]_i_1_n_0                           | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_sender/btn_held[3]_i_1_n_0                                                          | reset_IBUF                            |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos0[3]_i_1_n_0                            | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_5[0]                               | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_12[0]                              | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/frame_tick                                     | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_10[0]                              | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_0[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos1[3]_i_1_n_0                            | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/E[0]                                         | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_4[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/E[0]                                          | reset_IBUF                            |                4 |              4 |         1.00 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/Rstate[3]_i_1_n_0                                           | reset_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_17[0]                           | reset_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_3[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/r_pos15[3]_i_1_n_0                           | U_MainController/U_main_control/AR[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_11[0]                              | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_2[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_1[0]                               | U_MainController/U_main_control/AR[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_7[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_LINE_COUNT/state_reg_9[0]                               | U_MainController/U_main_control/AR[0] |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG               | U_sender/U_FIFO_TX/U_CONTROL_UNIT/E[0]                                                | reset_IBUF                            |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG               | U_sender/U_FIFO_TX/U_CONTROL_UNIT/rptr_reg[4]_i_1_n_0                                 | reset_IBUF                            |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG               | U_MainController/U_main_control/E[0]                                                  | reset_IBUF                            |                2 |              5 |         2.50 |
+|  pclk_IBUF_BUFG              | U_VGAcam/U_OV7670MemController/pixelData[7]                                           | reset_IBUF                            |                3 |              5 |         1.67 |
+|  rclk                        |                                                                                       | reset_IBUF                            |                5 |              6 |         1.20 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/state_reg[1][0]                               | reset_IBUF                            |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG               | U_RECEIVER/U_UART_RX/data_out[7]_i_1_n_0                                              | reset_IBUF                            |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG               | U_sender/U_UART_TX/shift_reg[7]_i_1_n_0                                               | reset_IBUF                            |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG               | U_sender/data_in[7]_i_1_n_0                                                           | reset_IBUF                            |                4 |              8 |         2.00 |
+|  pclk_IBUF_BUFG              | U_VGAcam/U_OV7670MemController/pixelData[15]_i_1_n_0                                  | reset_IBUF                            |                3 |              8 |         2.67 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/U_SCCB_MASTER/U_I2C_MASTER/E[0]               |                                       |                3 |              8 |         2.67 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/WdataBlock[15]_i_1_n_0                                      | reset_IBUF                            |                2 |              8 |         4.00 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/WdataBlock[7]_i_1_n_0                                       | reset_IBUF                            |                6 |              8 |         1.33 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/U_SCCB_MASTER/U_I2C_MASTER/rx_data[7]_i_1_n_0 |                                       |                1 |              8 |         8.00 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/U_SCCB_MASTER/U_I2C_MASTER/tx_shift_reg_1     | reset_IBUF                            |                2 |              8 |         4.00 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/U_SCCB_MASTER/U_I2C_MASTER/rx_shift_reg_0     | reset_IBUF                            |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_28[0]                           | U_MainController/U_main_control/AR[0] |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_22[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_25[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_19[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_29[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_18[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_31[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_27[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_30[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_21[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_26[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_33[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_32[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_23[0]                           | U_MainController/U_main_control/AR[0] |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_24[0]                           | U_MainController/U_main_control/AR[0] |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG               | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[1]_20[0]                           | U_MainController/U_main_control/AR[0] |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_GAMERESULT/gen_lane[3].u_fsm/miss_reg_0[0]              | U_MainController/U_main_control/AR[0] |                3 |             10 |         3.33 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count[9]_i_1_n_0                             | reset_IBUF                            |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_GAMERESULT/gen_lane[3].u_fsm/E[0]                       | U_MainController/U_main_control/AR[0] |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG               | U_sender/U_UART_TX/clk_cnt[10]_i_1__0_n_0                                             | reset_IBUF                            |                4 |             11 |         2.75 |
+|  rclk                        | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[2]_2[0]                            | reset_IBUF                            |                5 |             15 |         3.00 |
+|  rclk                        | U_VGAcam/U_VGA_Decoder/u_pixel_counter/E[0]                                           | reset_IBUF                            |                4 |             15 |         3.75 |
+|  rclk                        | U_VGAcam/U_VGA_Decoder/u_pixel_counter/h_count_reg[7]_0[0]                            | reset_IBUF                            |                5 |             15 |         3.00 |
+|  rclk                        | U_VGAcam/U_VGA_Decoder/u_pixel_counter/v_count_reg[2]_1[0]                            | reset_IBUF                            |                5 |             15 |         3.00 |
+|  clk_IBUF_BUFG               | U_sender/U_FIFO_TX/U_CONTROL_UNIT/E[0]                                                |                                       |                2 |             16 |         8.00 |
+|  instance_name/inst/clk_100M | rclk                                                                                  | reset_IBUF                            |                5 |             20 |         4.00 |
+|  instance_name/inst/clk_100M | U_VGAcam/U_SCCB_Data_Ctrl/U_SCCB_SENDER/state_reg[0][0]                               | reset_IBUF                            |                8 |             22 |         2.75 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_SCORE/basic_score[22]_i_1_n_0                           | reset_IBUF                            |                5 |             23 |         4.60 |
+|  clk_IBUF_BUFG               | U_MainController/U_top_game/U_SCORE/combo_score[22]_i_1_n_0                           | reset_IBUF                            |                4 |             23 |         5.75 |
+|  clk_IBUF_BUFG               | U_MainController/U_main_control/s_cnt_0                                               | reset_IBUF                            |                7 |             29 |         4.14 |
+|  instance_name/inst/clk_100M |                                                                                       | reset_IBUF                            |               24 |             48 |         2.00 |
+|  pclk_IBUF_BUFG              | U_VGAcam/U_OV7670MemController/wAddr[0]_i_1_n_0                                       | reset_IBUF                            |               16 |             70 |         4.38 |
+|  clk_IBUF_BUFG               |                                                                                       | U_MainController/U_main_control/AR[0] |               41 |            100 |         2.44 |
+|  clk_IBUF_BUFG               |                                                                                       | reset_IBUF                            |               48 |            141 |         2.94 |
++------------------------------+---------------------------------------------------------------------------------------+---------------------------------------+------------------+----------------+--------------+
+
+

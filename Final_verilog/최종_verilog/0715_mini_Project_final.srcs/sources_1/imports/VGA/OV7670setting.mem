@@ -1,0 +1,62 @@
+@00 1280 // ResetSW
+@01 3A04 // ResetSW_Config(defaults)
+@02 1200
+@03 13E7
+@04 6F9F
+@05 B084
+@06 073A
+@07 7135
+@08 7211
+@09 73F0
+@0a 7A20
+@0b 7B01
+@0c 7C1E
+@0d 7D35
+@0e 7E5A
+@0f 7F69
+@10 8076
+@11 8180
+@12 8288
+@13 838F
+@14 8497
+@15 85A3
+@16 86AF
+@17 87C4
+@18 88D7
+@19 89E8
+@1a 0000
+@1b 1000
+@1c 0D40
+@1d 1418
+@1e A505
+@1f AB07
+@20 2495
+@21 2533
+@22 26E3
+@23 9F78
+@24 A068
+@25 A103
+@26 A6D8
+@27 A7D8
+@28 A8F0
+@29 A990
+@2a AA94
+@2b 1211 // ResetSW_SetRosolution_Config(RES_QVGA)
+@2c 0C04
+@2d 3E19
+@2e 703A
+@2f 7135
+@30 7211
+@31 73F1
+@32 A202
+@33 17FF // ResetSW_SetResolution_SetFrameControl
+@34 18FF
+@35 32FF
+@36 19FF
+@37 1AFF
+@38 03FF
+@39 12FF // ResetSW_SetColorFormat
+@3a 40FF
+@3b 1301 // AutoExposureMode
+@3c 55FF // SetBrightness
+@3d 1304 // AutoGainMode

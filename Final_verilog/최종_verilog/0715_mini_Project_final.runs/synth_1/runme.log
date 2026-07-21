@@ -1,0 +1,665 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21604
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1103.473 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.runs/synth_1/.Xil/Vivado-11828-DESKTOP-7CFQ9ND/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.runs/synth_1/.Xil/Vivado-11828-DESKTOP-7CFQ9ND/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'BtnDebouncer' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/BtnDebouncer.sv:3]
+	Parameter CNT_MAX bound to: 250000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BtnDebouncer' (2#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/BtnDebouncer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'MainController' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/MainController.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/MainControl.sv:3]
+	Parameter IDLE bound to: 3'b000 
+	Parameter SELECT bound to: 3'b001 
+	Parameter READY bound to: 3'b010 
+	Parameter GAME_CONT bound to: 3'b011 
+	Parameter CAPTURE bound to: 3'b100 
+	Parameter DONE bound to: 3'b101 
+	Parameter TIME_3SEC bound to: 29'b10001111000011010001100000000 
+INFO: [Synth 8-6155] done synthesizing module 'MainControl' (3#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/MainControl.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'top_game' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/top_module.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'line_count' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/linecounter.sv:3]
+	Parameter LINE_VALUE bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'line_count' (4#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/linecounter.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'GameResult' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/GameResult.sv:3]
+	Parameter SLOT_COUNT bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6157] synthesizing module 'slot_fsm' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/GameResult.sv:314]
+	Parameter ZONE_MIN bound to: 32'sb00000000000000000000000110000001 
+	Parameter PERFECT_MIN bound to: 32'sb00000000000000000000000110010101 
+	Parameter PERFECT_MAX bound to: 32'sb00000000000000000000000110111101 
+	Parameter ZONE_MAX bound to: 32'sb00000000000000000000000111010001 
+INFO: [Synth 8-226] default block is never used [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/GameResult.sv:408]
+INFO: [Synth 8-6155] done synthesizing module 'slot_fsm' (5#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/GameResult.sv:314]
+INFO: [Synth 8-6155] done synthesizing module 'GameResult' (6#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/GameResult.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'score' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/score.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/score.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'score' (7#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/maincontroller/score.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_game' (8#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/top_module.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'MainController' (9#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/MainController.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sender' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fifo' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:299]
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:341]
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (10#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:341]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:372]
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:417]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (11#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:372]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (12#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:299]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:209]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
+	Parameter S_IDLE bound to: 2'b00 
+	Parameter S_START bound to: 2'b01 
+	Parameter S_DATA bound to: 2'b10 
+	Parameter S_STOP bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:244]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (13#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'sender' (14#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/sender.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'receiver' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/receiver.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/uart_rx.sv:4]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
+	Parameter HALF_BIT bound to: 434 - type: integer 
+	Parameter S_IDLE bound to: 2'b00 
+	Parameter S_START bound to: 2'b01 
+	Parameter S_DATA bound to: 2'b10 
+	Parameter S_STOP bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/uart_rx.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (15#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/uart_rx.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'receiver' (16#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/receiver.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'VGAcam' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGAcam.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'OV7670_SCCB_Controller' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:1]
+	Parameter hstart bound to: 168 - type: integer 
+	Parameter hstop bound to: 24 - type: integer 
+	Parameter vstart bound to: 12 - type: integer 
+	Parameter vstop bound to: 492 - type: integer 
+	Parameter HSTART bound to: 21 - type: integer 
+	Parameter HSTOP bound to: 3 - type: integer 
+	Parameter HREF bound to: 0 - type: integer 
+	Parameter VSTART bound to: 3 - type: integer 
+	Parameter VSTOP bound to: 123 - type: integer 
+	Parameter VREF bound to: 0 - type: integer 
+	Parameter AutoExposureMode_EN bound to: 1 - type: integer 
+	Parameter AutoGainMode_EN bound to: 1 - type: integer 
+	Parameter BRIGHTNESS bound to: 128 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter ResetSW bound to: 1 - type: integer 
+	Parameter ShowColorBar bound to: 2 - type: integer 
+	Parameter AutoExposureMode bound to: 3 - type: integer 
+	Parameter SetBrightness bound to: 4 - type: integer 
+	Parameter AutoGainMode bound to: 5 - type: integer 
+	Parameter P1 bound to: 1 - type: integer 
+	Parameter P2 bound to: 2 - type: integer 
+	Parameter P3 bound to: 3 - type: integer 
+	Parameter P4 bound to: 4 - type: integer 
+	Parameter P5 bound to: 5 - type: integer 
+	Parameter P6 bound to: 6 - type: integer 
+	Parameter P7 bound to: 7 - type: integer 
+	Parameter P8 bound to: 8 - type: integer 
+	Parameter P9 bound to: 9 - type: integer 
+	Parameter WRITE bound to: 10 - type: integer 
+	Parameter READ1 bound to: 11 - type: integer 
+	Parameter READ2 bound to: 12 - type: integer 
+	Parameter DONE bound to: 13 - type: integer 
+	Parameter ROM_DEPTH bound to: 70 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'OV7670setting.mem' is read successfully [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:75]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:116]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:254]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:266]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:349]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:381]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:99]
+INFO: [Synth 8-6157] synthesizing module 'SCCB_sender' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/SCCB_sender.sv:1]
+	Parameter IP_ADDR bound to: 7'b0100001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/SCCB_sender.sv:44]
+INFO: [Synth 8-6157] synthesizing module 'I2C_Master' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/i2c_master.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/i2c_master.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master' (17#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/i2c_master.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_Master' (18#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/i2c_master.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'SCCB_sender' (19#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/SCCB_sender.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_SCCB_Controller' (20#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670_SCCB_Controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Decoder' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'pclk_gen' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:46]
+INFO: [Synth 8-6155] done synthesizing module 'pclk_gen' (21#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'pixel_counter' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:69]
+	Parameter H_MAX bound to: 800 - type: integer 
+	Parameter V_MAX bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_counter' (22#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:69]
+INFO: [Synth 8-6157] synthesizing module 'vga_decoder' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:109]
+	Parameter H_Visible_area bound to: 640 - type: integer 
+	Parameter H_Front_porch bound to: 16 - type: integer 
+	Parameter H_Sync_pulse bound to: 96 - type: integer 
+	Parameter H_Back_porch bound to: 48 - type: integer 
+	Parameter H_Whole_line bound to: 800 - type: integer 
+	Parameter V_Visible_area bound to: 480 - type: integer 
+	Parameter V_Front_porch bound to: 10 - type: integer 
+	Parameter V_Sync_pulse bound to: 2 - type: integer 
+	Parameter V_Back_porch bound to: 33 - type: integer 
+	Parameter V_Whole_frame bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_decoder' (23#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:109]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Decoder' (24#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGA_Decoder.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'OV7670MemController' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670MemController.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670MemController' (25#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/OV7670MemController.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'frameBuffer_CAM0' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameBuffer.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'frameBuffer_CAM0' (26#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameBuffer.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'framePrinter' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/framePrinter.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'RegionDetector' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/Region_Detector.sv:1]
+	Parameter TARGET_PX bound to: 50 - type: integer 
+	Parameter X_PX bound to: 320 - type: integer 
+	Parameter Y_PX bound to: 240 - type: integer 
+	Parameter TOT_PX bound to: 76800 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter SCAN bound to: 1 - type: integer 
+	Parameter DECISION bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/Region_Detector.sv:64]
+INFO: [Synth 8-6155] done synthesizing module 'RegionDetector' (27#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/Region_Detector.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'frameController' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Filter_Region' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:122]
+INFO: [Synth 8-6155] done synthesizing module 'Filter_Region' (28#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:122]
+INFO: [Synth 8-6157] synthesizing module 'Filter_NOTE' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:188]
+INFO: [Synth 8-6155] done synthesizing module 'Filter_NOTE' (29#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:188]
+INFO: [Synth 8-6157] synthesizing module 'Filter_GAME' [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:353]
+INFO: [Synth 8-6155] done synthesizing module 'Filter_GAME' (30#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:353]
+INFO: [Synth 8-6155] done synthesizing module 'frameController' (31#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/vga1/frameController.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'framePrinter' (32#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/framePrinter.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'VGAcam' (33#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/VGA/VGAcam.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (34#1) [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/sources_1/imports/uart receiver/top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1116.098 ; gain = 12.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.098 ; gain = 12.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.098 ; gain = 12.625
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1116.098 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Finished Parsing XDC File [c:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Parsing XDC File [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/constrs_1/imports/OnDeviceAI/Basys-3-Master.xdc]
+Finished Parsing XDC File [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/constrs_1/imports/OnDeviceAI/Basys-3-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.srcs/constrs_1/imports/OnDeviceAI/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1221.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1221.820 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1221.820 ; gain = 118.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1221.820 ; gain = 118.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for instance_name. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1221.820 ; gain = 118.348
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'MainControl'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'score'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sender'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'SCCB_sender'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'RegionDetector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                  SELECT |                              001 |                              001
+                   READY |                              010 |                              010
+               GAME_CONT |                              011 |                              011
+                 CAPTURE |                              100 |                              100
+                    DONE |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'c_state_reg' using encoding 'sequential' in module 'MainControl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                    GAME |                              010 |                               01
+                    DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'score'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                 S_START |                               01 |                               01
+                  S_DATA |                               10 |                               10
+                  S_STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+                   START |                             0001 |                             0001
+                 CONTROL |                             0010 |                             0010
+                    DATA |                             0011 |                             0011
+                   COMBO |                             0100 |                             0100
+             SCORE_FIRST |                             0101 |                             0101
+            SCORE_SECOND |                             0110 |                             0110
+             SCORE_THIRD |                             0111 |                             0111
+                    DONE |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'sender'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                 S_START |                               01 |                               01
+                  S_DATA |                               10 |                               10
+                  S_STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+                WAIT_CMD |                              010 |                              010
+                    DATA |                              011 |                              011
+                     ACK |                              100 |                              100
+                    STOP |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'i2c_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+                      ID |                              010 |                              010
+                     REG |                              011 |                              011
+                    DATA |                              100 |                              100
+                    STOP |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'SCCB_sender'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    SCAN |                               01 |                               01
+                DECISION |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'RegionDetector'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1221.820 ; gain = 118.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   29 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   23 Bit       Adders := 2     
+	   2 Input   22 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 4     
+	   2 Input   15 Bit       Adders := 4     
+	   3 Input   12 Bit       Adders := 16    
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 35    
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
+	   3 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 3     
++---Registers : 
+	               29 Bit    Registers := 1     
+	               23 Bit    Registers := 3     
+	               22 Bit    Registers := 1     
+	               18 Bit    Registers := 4     
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 20    
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 41    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 156   
++---RAMs : 
+	            1200K Bit	(76800 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   29 Bit        Muxes := 1     
+	   4 Input   23 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 2     
+	   3 Input   23 Bit        Muxes := 2     
+	   2 Input   22 Bit        Muxes := 6     
+	   7 Input   22 Bit        Muxes := 1     
+	  12 Input   22 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 10    
+	   7 Input   16 Bit        Muxes := 4     
+	  12 Input   16 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 11    
+	   5 Input   15 Bit        Muxes := 1     
+	   4 Input   15 Bit        Muxes := 1     
+	   3 Input   15 Bit        Muxes := 4     
+	   2 Input   12 Bit        Muxes := 16    
+	   5 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 3     
+	   4 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 17    
+	   9 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   6 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   6 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 24    
+	   9 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 3     
+	  12 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 5     
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 4     
+	   6 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 291   
+	   6 Input    1 Bit        Muxes := 27    
+	   5 Input    1 Bit        Muxes := 19    
+	   3 Input    1 Bit        Muxes := 8     
+	   4 Input    1 Bit        Muxes := 37    
+	   9 Input    1 Bit        Muxes := 2     
+	  12 Input    1 Bit        Muxes := 14    
+	   7 Input    1 Bit        Muxes := 30    
+	  18 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP combo_reg0, operation Mode is: (D+(A:0x1))*B.
+DSP Report: operator combo_reg0 is absorbed into DSP combo_reg0.
+DSP Report: operator combo_reg1 is absorbed into DSP combo_reg0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1221.820 ; gain = 118.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-----------------------+------------+---------------+----------------+
+|Module Name            | RTL Object | Depth x Width | Implemented As | 
++-----------------------+------------+---------------+----------------+
+|OV7670_SCCB_Controller | p_0_out    | 64x16         | LUT            | 
+|OV7670_SCCB_Controller | p_0_out    | 64x16         | LUT            | 
++-----------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U_VGAcam    | U_FrameBuffer/mem_reg | 75 K x 16(NO_CHANGE)   | W |   | 75 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                                      | Inference | Size (Depth x Width) | Primitives  | 
++------------+-------------------------------------------------+-----------+----------------------+-------------+
+|top         | U_sender/U_FIFO_TX/U_REG_FILE/register_file_reg | Implied   | 32 x 8               | RAM32M x 2	 | 
++------------+-------------------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|score       | (D+(A:0x1))*B | 1      | 10     | -      | 10     | 21     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1238.047 ; gain = 134.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1243.000 ; gain = 139.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U_VGAcam    | U_FrameBuffer/mem_reg | 75 K x 16(NO_CHANGE)   | W |   | 75 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+-------------------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                                      | Inference | Size (Depth x Width) | Primitives  | 
++------------+-------------------------------------------------+-----------+----------------------+-------------+
+|top         | U_sender/U_FIFO_TX/U_REG_FILE/register_file_reg | Implied   | 32 x 8               | RAM32M x 2	 | 
++------------+-------------------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_11__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_12__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_13__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_14__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_VGAcam/U_FrameBuffer/mem_reg_1_15__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1298.102 ; gain = 194.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |BUFG     |     2|
+|3     |CARRY4   |   164|
+|4     |DSP48E1  |     1|
+|5     |LUT1     |    46|
+|6     |LUT2     |   426|
+|7     |LUT3     |   244|
+|8     |LUT4     |   422|
+|9     |LUT5     |   497|
+|10    |LUT6     |   715|
+|11    |MUXF7    |     1|
+|12    |RAM32M   |     2|
+|13    |RAMB36E1 |    39|
+|16    |FDCE     |   973|
+|17    |FDPE     |     9|
+|18    |FDRE     |    18|
+|19    |IBUF     |    17|
+|20    |IOBUF    |     1|
+|21    |OBUF     |    23|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1311.926 ; gain = 208.453
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1311.926 ; gain = 102.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1311.926 ; gain = 208.453
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1321.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 208 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1321.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+140 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1321.445 ; gain = 217.973
+INFO: [Common 17-1381] The checkpoint 'C:/Users/kccistc/Downloads/0715_mini_Project_final/0715_mini_Project_final.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 16 15:51:19 2026...
