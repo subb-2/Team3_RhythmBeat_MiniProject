@@ -16,14 +16,15 @@
   <img src="https://github.com/user-attachments/assets/3ce1174a-6ce1-47ad-bb32-f75d88cbeb07" width="50%" height="auto">
 </div>
 
+### 시스템 설계
 1. PC(Python)가 UART로 내려보낸 노트 데이터를 FPGA가 화면에 떨어뜨린 뒤
 2. OV7670 카메라 영상에서 붉은 영역을 검출해 4개 레인 중 어느 레인을 눌렀는지 판별
 3. 판정(Perfect / Good / Miss), 콤보, 점수를 계산하여 VGA로 출력
 4. 게임 결과는 다시 UART로 PC에 전송되어 결과 화면과 리더보드에 반영
 
-판정·점수 서브시스템(`top_game`)은 **UVM 검증 환경을 별도로 구축**하여
-Directed + Constrained-Random 검증을 수행했고, 이 과정에서 `score.sv`의 콤보 보너스 RTL 버그를 발견·수정하고
-Cross Coverage를 40% → 100%로 클로저했습니다.
+### UVM 검증
+* 노트 생성 및 판정/점수인 시스템(`top_game`)은 **UVM 검증 환경을 별도로 구축**하여 Directed + Constrained-Random 검증 수행
+* 이 과정에서 `score.sv`의 콤보 보너스 RTL 버그를 발견 및 수정하고 Cross Coverage를 40% → 100%로 클로저 진행
 
 ---
 
@@ -31,10 +32,13 @@ Cross Coverage를 40% → 100%로 클로저했습니다.
 
 | 이름 | 담당 |
 |------|------|
-| 김수빈 | 판정·점수 로직(`GameResult` / `score`) 및 `top_game` UVM 검증 환경 구축, RTL 버그 분석 |
-| (팀원) | OV7670 카메라 / SCCB / Region Detector |
-| (팀원) | VGA 렌더링 (frameBuffer / framePrinter / VGA Decoder) |
-| (팀원) | UART Sender / Receiver, PC 리듬게임 UI (Python) |
+| 김수빈 | 판정 로직(`GameResult`) 및 `top_game` UVM 검증|
+| 김지홍 |  |
+| 문태성 |  |
+| 서어진 |  |
+| 송주연 |  |
+| 윤수민 |  |
+| 조준호 |  |
 
 ---
 
