@@ -45,18 +45,9 @@
 ## 🏗️ 시스템 구조
 
 ```
-[OV7670 Camera] ──► Region Detector ──► region[3:0] ─┐
-                                                     │
-[PC / Python] ──UART──► Receiver ──► lane_data,      ▼
-                        note_start ──► Main Controller (FSM)
-                                             │
-                                             ├─► line_count  (노트 낙하 위치 관리)
-                                             ├─► GameResult  (판정 / 콤보 / fever)
-                                             └─► score       (점수 누적)
-                                                     │
-                                       ┌─────────────┴─────────────┐
-                                       ▼                           ▼
-                                 VGA (framePrinter)          Sender ──UART──► PC
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4e5a13f9-96e4-4e79-9470-209f25c40627" width="50%" height="auto">
+</div>
 ```
 
 ### Main Controller FSM
