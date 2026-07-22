@@ -44,11 +44,12 @@
 
 ## 🏗️ 시스템 구조
 
-
+```
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4e5a13f9-96e4-4e79-9470-209f25c40627" width="50%" height="auto">
 </div>
 
+```
 ```
 
 ### Main Controller FSM
