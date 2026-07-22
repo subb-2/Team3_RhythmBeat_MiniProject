@@ -16,10 +16,10 @@
   <img src="https://github.com/user-attachments/assets/3ce1174a-6ce1-47ad-bb32-f75d88cbeb07" width="50%" height="auto">
 </div>
 
-OV7670 카메라 영상에서 붉은 영역을 검출해 4개 레인 중 어느 레인을 눌렀는지 판별하고,
-PC(Python)가 UART로 내려보낸 노트 데이터를 FPGA가 화면에 떨어뜨린 뒤
-판정(Perfect / Good / Miss) · 콤보 · 점수를 계산하여 VGA로 출력합니다.
-게임 결과는 다시 UART로 PC에 전송되어 결과 화면과 리더보드에 반영됩니다.
+1. PC(Python)가 UART로 내려보낸 노트 데이터를 FPGA가 화면에 떨어뜨린 뒤
+2. OV7670 카메라 영상에서 붉은 영역을 검출해 4개 레인 중 어느 레인을 눌렀는지 판별
+3. 판정(Perfect / Good / Miss), 콤보, 점수를 계산하여 VGA로 출력
+4. 게임 결과는 다시 UART로 PC에 전송되어 결과 화면과 리더보드에 반영
 
 판정·점수 서브시스템(`top_game`)은 **UVM 검증 환경을 별도로 구축**하여
 Directed + Constrained-Random 검증을 수행했고, 이 과정에서 `score.sv`의 콤보 보너스 RTL 버그를 발견·수정하고
