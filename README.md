@@ -33,12 +33,12 @@
 | 이름 | 담당 |
 |------|------|
 | 김수빈 | 판정 로직(`GameResult`) 및 `top_game` UVM 검증|
-| 김지홍 |  |
-| 문태성 |  |
-| 서어진 |  |
-| 송주연 |  |
-| 윤수민 |  |
-| 조준호 |  |
+| 김지홍 | UART Sender 및 ROM 데이터 |
+| 문태성 | Line Counter |
+| 서어진 | 점수 로직('Score') 및 Python UI |
+| 송주연 | UART Receiver 및 ROM 데이터 |
+| 윤수민 | SCCB Controller 및 VGA |
+| 조준호 | MainController |
 
 ---
 
