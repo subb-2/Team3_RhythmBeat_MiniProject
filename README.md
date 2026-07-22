@@ -70,7 +70,6 @@
 | `PERFECT_MAX` | 445 | Perfect 판정 종료 |
 | `ZONE_MAX` | 465 | Good 판정 종료 (초과 시 Miss) |
 
----
 
 ## 🔑 주요 구현 내용
 
