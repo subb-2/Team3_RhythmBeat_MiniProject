@@ -3,14 +3,14 @@
 📅 프로젝트 정보
 
 * 진행 기간: 2026.07.08 ~ 2026.07.20
-* 설계 대상: 카메라 손 인식 입력 기반 VGA 리듬 게임 (Main Controller / 판정·점수 / VGA 출력 / UART 송수신)
+* 설계 대상: 카메라 손 인식 입력 기반 VGA 리듬 게임 (Main Controller / 판정 및 점수 / VGA 출력 / UART 송수신)
 * 기술 스택: `SystemVerilog`, `UVM`, `Vivado`, `Synopsys VCS`, `Basys3`, `OV7670`, `Python(pygame)`
 
 ---
 
 ## 📝 프로젝트 개요
 
-버튼 대신 **카메라로 손 위치를 인식해 조작하는 VGA 리듬 게임**입니다.
+**카메라로 손 위치를 인식해 조작하는 VGA 리듬 게임**입니다.
 
 OV7670 카메라 영상에서 붉은 영역을 검출해 4개 레인 중 어느 레인을 눌렀는지 판별하고,
 PC(Python)가 UART로 내려보낸 노트 데이터를 FPGA가 화면에 떨어뜨린 뒤
