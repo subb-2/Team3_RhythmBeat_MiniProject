@@ -13,7 +13,7 @@
 **카메라로 손 위치를 인식해 조작하는 VGA 리듬 게임**입니다.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3ce1174a-6ce1-47ad-bb32-f75d88cbeb07" width="70%" height="auto">
+  <img src="https://github.com/user-attachments/assets/3ce1174a-6ce1-47ad-bb32-f75d88cbeb07" width="50%" height="auto">
 </div>
 
 OV7670 카메라 영상에서 붉은 영역을 검출해 4개 레인 중 어느 레인을 눌렀는지 판별하고,
