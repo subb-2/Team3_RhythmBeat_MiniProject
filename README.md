@@ -16,6 +16,8 @@
   <img src="https://github.com/user-attachments/assets/3ce1174a-6ce1-47ad-bb32-f75d88cbeb07" width="50%" height="auto">
 </div>
 
+https://github.com/user-attachments/assets/98387fde-c3cd-4c2e-8d01-939b72690fbc
+
 ### 시스템 설계
 1. PC(Python)가 UART로 내려보낸 노트 데이터를 FPGA가 화면에 떨어뜨린 뒤
 2. OV7670 카메라 영상에서 붉은 영역을 검출해 4개 레인 중 어느 레인을 눌렀는지 판별
